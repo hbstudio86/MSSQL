@@ -1,2 +1,6 @@
--- use DoitSQL; <-- 이것으로 시작해줘야 한다... 힘드네;;
-SELECT symbol, company_name FROM nasdaq_company;
+SELECT * FROM nasdaq_company
+--WHERE (ipo_year >= 1960 AND ipo_year <= 2010)
+WHERE ipo_year BETWEEN 1960 AND 2010
+AND symbol LIKE 'A%'
+AND is_deleted NOT LIKE 'null'
+ORDER BY ipo_year, sector, company_name,open_price;
