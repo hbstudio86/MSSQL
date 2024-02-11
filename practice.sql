@@ -1,3 +1,4 @@
+USE DoItSQL;
 SELECT * FROM nasdaq_company
 --WHERE (ipo_year >= 1960 AND ipo_year <= 2010)
 --WHERE ipo_year BETWEEN 1960 AND 2010
